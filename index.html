@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Waseem Enterprises – Premium Baby Milk Powder. Complete nutrition for your baby’s healthy growth. Trusted by parents worldwide.">
+    <title>Waseem Enterprises | Premium Baby Milk Formula</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
+        
+        :root {
+            --primary: #001F3F;
+            --accent: #00BFFF;
+        }
+        
+        .tail-container {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .logo-font {
+            font-family: 'Playfair Display', sans-serif;
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 31, 63, 0.65), rgba(0, 31, 63, 0.65)), url('https://picsum.photos/id/1015/1920/1080');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #00BFFF;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .product-card {
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-12px) scale(1.03);
+            box-shadow: 0 25px 50px -12px rgb(0 31 63 / 0.25);
+        }
+
+        .modal {
+            animation: modalPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        @keyframes modalPop {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .section-header {
+            position: relative;
+        }
+        
+        .section-header:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, #001F3F, #00BFFF);
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .faq-summary {
+            transition: all 0.3s ease;
+        }
+        
+        details[open] .faq-summary {
+            color: #00BFFF;
+        }
+    </style>
+</head>
+<body class="tail-container text-gray-900 overflow-x-hidden">
+
+    <!-- NAVBAR -->
+    <nav class="bg-white border-b border-gray-100 fixed w-full z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center gap-x-3">
+                <div class="w-11 h-11 bg-[#001F3F] rounded-2xl flex items-center justify-center shadow-inner">
+                    <span class="text-white text-4xl font-bold logo-font tracking-tighter">W</span>
+                </div>
+                <div>
+                    <span class="logo-font text-3xl font-bold text-[#001F3F] tracking-tighter">Waseem</span>
+                    <span class="logo-font text-3xl font-bold text-[#00BFFF] tracking-tighter">Enterprises</span>
+                </div>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-x-9 text-sm font-medium">
+                <a href="#home" class="nav-link text-gray-700 hover:text-[#001F3F]">Home</a>
+                <a href="#products" class="nav-link text-gray-700 hover:text-[#001F3F]">Products</a>
+                <a href="#about" class="nav-link text-gray-700 hover:text-[#001F3F]">About Us</a>
+                <a href="#nutrition" class="nav-link text-gray-700 hover:text-[#001F3F]">Nutrition</a>
+                <a href="#reviews" class="nav-link text-gray-700 hover:text-[#001F3F]">Reviews</a>
+                <a href="#blog" class="nav-link text-gray-700 hover:text-[#001F3F]">Blog</a>
+                <a href="#faq" class="nav-link text-gray-700 hover:text-[#001F3F]">FAQ</a>
+                <a href="#contact" class="nav-link text-gray-700 hover:text-[#001F3F]">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-x-4">
+    <a href="#products"
+       onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'}); return false;"
+       class="hidden md:flex items-center gap-x-2 bg-[#00BFFF] hover:bg-[#0099cc] text-white font-semibold px-8 py-3.5 rounded-3xl transition-all duration-300 shadow-lg shadow-[#00BFFF]/30">
+        <i class="fa-solid fa-eye"></i>
+        <span>Explore Products</span>
+    </a>
+</div>
+
+				<!-- Mobile Hamburger -->
+				<button id="hamburger"
+						class="md:hidden text-3xl text-[#001F3F] focus:outline-none">
+					<i class="fa-solid fa-bars"></i>
+				</button>
+			</div>
+		</div>
+		
+		<!-- Mobile Menu -->
+		<div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+			<div class="px-6 py-8 flex flex-col gap-y-6 text-lg font-medium">
+				<a href="#home" class="mobile-link">Home</a>
+				<a href="#products" class="mobile-link">Products</a>
+				<a href="#about" class="mobile-link">About Us</a>
+				<a href="#nutrition" class="mobile-link">Nutrition &amp; Benefits</a>
+				<a href="#reviews" class="mobile-link">Parent Reviews</a>
+				<a href="#blog" class="mobile-link">Blog &amp; Guides</a>
+				<a href="#faq" class="mobile-link">FAQ</a>
+				<a href="#contact" class="mobile-link">Contact Us</a>
+				<a href="#products"
+				   onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'}); return false;"
+				   class="mt-6 bg-[#00BFFF] text-white text-center font-semibold py-4 rounded-3xl flex items-center justify-center gap-x-3">
+					<i class="fa-solid fa-eye"></i>
+					Explore Products
+				</a>
+			</div>
+		</div>
+	</nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero-bg min-h-screen flex items-center relative pt-20">
+        <div class="max-w-7xl mx-auto px-6 text-center text-white">
+            <div class="max-w-4xl mx-auto">
+                <div class="inline-flex items-center gap-x-3 bg-white/20 backdrop-blur-md px-6 py-2 rounded-3xl text-sm 
+					**mt-4** md:mt-6 lg:mt-8 mb-8">
+					<div class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
+					<span class="font-medium">Pediatrician Recommended • Halal Certified</span>
+				</div>
+                
+                <h1 class="text-6xl md:text-7xl font-bold leading-none tracking-tighter logo-font mb-6">
+                    Complete Nutrition<br>for Your Baby’s<br>Healthy Growth
+                </h1>
+                
+                <p class="text-2xl text-white/90 max-w-2xl mx-auto mb-10">
+                    Pure, safe, and trusted baby milk formula made with love in Pakistan.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#products" 
+                       class="bg-white text-[#001F3F] font-semibold text-xl px-12 py-6 rounded-3xl hover:scale-105 transition-all shadow-2xl">
+                        Explore Products
+                    </a>
+                    <a href="#nutrition" 
+                       class="bg-white text-[#001F3F] font-semibold text-xl px-12 py-6 rounded-3xl hover:scale-105 transition-all shadow-2xl">
+                        Learn About Nutrition
+                    </a>
+                </div>
+                
+                <!-- Trust Badges -->
+                <div class="mt-16 flex flex-wrap justify-center gap-x-10 gap-y-6 text-sm">
+                    <div class="flex items-center gap-x-3">
+                        <i class="fa-solid fa-shield-halved text-2xl text-emerald-400"></i>
+                        <div>
+                            <div class="font-semibold">Quality Tested</div>
+                            <div class="text-white/70 text-xs">ISO 22000 Certified</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-x-3">
+                        <i class="fa-solid fa-user-doctor text-2xl text-emerald-400"></i>
+                        <div>
+                            <div class="font-semibold">Pediatrician Recommended</div>
+                            <div class="text-white/70 text-xs">By 500+ doctors</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-x-3">
+                        <i class="fa-solid fa-leaf text-2xl text-emerald-400"></i>
+                        <div>
+                            <div class="font-semibold">100% Safe Ingredients</div>
+                            <div class="text-white/70 text-xs">No added sugar</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+			<!-- Offline safety fallback -->
+			<style>
+				@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
+			</style>
+
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 text-white/70">
+            <div class="text-xs tracking-widest">SCROLL TO EXPLORE</div>
+            <i class="fa-solid fa-chevron-down animate-bounce text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- FEATURED BENEFITS -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 mx-auto bg-[#001F3F] rounded-3xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-arrow-trend-up text-4xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Supports Healthy Growth</h3>
+                    <p class="text-gray-600">Balanced proteins &amp; DHA for steady weight gain and development.</p>
+                </div>
+                <div class="text-center">
+					<div class="w-20 h-20 mx-auto bg-[#001F3F] rounded-3xl flex items-center justify-center mb-6">
+						<i class="fa-solid fa-leaf text-4xl text-white"></i>
+					</div>
+					<h3 class="text-2xl font-semibold mb-3">Easy Digestion</h3>
+					<p class="text-gray-600">Prebiotics & gentle formula for comfortable tummy.</p>
+				</div>
+                <div class="text-center">
+                    <div class="w-20 h-20 mx-auto bg-[#001F3F] rounded-3xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-brain text-4xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Brain Development</h3>
+                    <p class="text-gray-600">Omega-3 &amp; DHA for cognitive growth.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 mx-auto bg-[#001F3F] rounded-3xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-shield-virus text-4xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Strong Immunity</h3>
+                    <p class="text-gray-600">Vitamins A, C, D &amp; zinc for natural defense.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- PRODUCTS SECTION -->
+<section id="products" class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <span class="text-[#00BFFF] font-semibold tracking-widest">OUR RANGE</span>
+            <h2 class="text-5xl font-bold logo-font tracking-tighter text-[#001F3F] mt-3">Our Baby Milk Products</h2>
+            <p class="text-xl text-gray-600 mt-4 max-w-xl mx-auto">Carefully formulated for every stage of your baby’s growth</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <!-- Product 1 -->
+            <div onclick="openProductModal(1)" class="product-card bg-white rounded-3xl overflow-hidden cursor-pointer shadow-lg hover:shadow-xl transition-shadow">
+                <img src="https://github.com/waseementerprises190website/website/blob/main/milkchoice.png" class="w-full h-72 object-cover">
+                <div class="p-8">
+					<div class="flex justify-between items-start">
+						<div>
+							<span class="px-4 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold rounded-full">3-12 Months</span>
+							<h3 class="text-2xl font-semibold mt-4">Infant Formula Stage 1</h3>
+						</div>
+						<div class="text-right">
+							<div class="text-3xl font-bold text-[#001F3F]">419 PKR</div>
+							<div class="text-xs text-gray-500">400g Tin/Pack</div>
+						</div>
+					</div>
+					<p class="text-gray-600 mt-4 line-clamp-3">Gentle start for newborns. Easy-to-digest whey protein with prebiotics.</p>
+					<button onclick="event.stopImmediatePropagation(); openProductModal(0)"
+							class="mt-6 w-full bg-[#001F3F] text-white py-4 rounded-2xl font-medium hover:bg-[#00BFFF] transition-colors">
+						Learn More
+					</button>
+				</div>
+			</div>
+            <!-- Product 2 -->
+            <div onclick="openProductModal(1)" class="product-card bg-white rounded-3xl overflow-hidden cursor-pointer shadow-lg hover:shadow-xl transition-shadow">
+                <img src="https://github.com/waseementerprises190website/website/blob/main/a1pedia.png" class="w-full h-72 object-cover">
+                <div class="p-8">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="px-4 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded-full">3-24 Months</span>
+                            <h3 class="text-2xl font-semibold mt-4">Follow-On Milk Stage 2</h3>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-3xl font-bold text-[#001F3F]">569 PKR</div>
+                            <div class="text-xs text-gray-500">400g Tin/Pack</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mt-4 line-clamp-3">Higher iron & calcium for active growth and strong bones.</p>
+                    <button onclick="event.stopImmediatePropagation(); openProductModal(1)"
+                            class="mt-6 w-full bg-[#001F3F] text-white py-4 rounded-2xl font-medium hover:bg-[#00BFFF] transition-colors">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-12">
+            <a href="#products" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})"
+               class="inline-flex items-center gap-x-3 text-[#00BFFF] font-semibold">
+                <span>Products & Packs</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Product Detail Modal (shared for both products) -->
+<div id="productModal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden px-4">
+    <div class="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative">
+        <!-- Close Button -->
+        <button 
+            type="button"
+            onclick="document.getElementById('productModal').classList.add('hidden')"
+            class="absolute top-6 right-6 text-gray-500 hover:text-[#001F3F] text-5xl leading-none transition-transform hover:scale-110 focus:outline-none"
+            aria-label="Close product details"
+        >
+            ×
+        </button>
+
+        <div class="p-10 md:p-12">
+            <div id="modalContent" class="space-y-8">
+                <!-- Content will be filled by JS -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript for opening product modal with dynamic content -->
+<script>
+    const products = [
+        {
+            title: "Infant Formula Stage 1",
+            subtitle: "3-12 Months • Gentle Nutrition for Newborns",
+            price: "419 PKR (400g Tin/Pack)",
+            description: "Specially designed as a gentle first milk for newborns and babies up to 6 months when breastfeeding is not possible or as a supplement. Easy-to-digest whey-based formula with prebiotics to support healthy digestion.",
+            keyBenefits: [
+                "Whey-dominant protein blend for easy digestion",
+                "Prebiotics (GOS/FOS) to promote good gut bacteria",
+                "DHA & ARA for brain and eye development",
+                "Important vitamins (A, C, D) and iron for immunity & growth",
+                "No palm oil in some variants – gentle on tiny tummies"
+            ],
+            preparation: "Always follow the instructions on the tin/pack. Use boiled water cooled to 40°C. 1 level scoop per 30ml water. Prepare fresh feed each time.",
+            note: "Breast milk is best for babies. Consult your pediatrician before use, especially if baby has allergies or special needs."
+        },
+        {
+            title: "Follow-On Milk Stage 2",
+            subtitle: "3-24 Months • Support or Active Growth",
+            price: "569 PKR (400g Tin/Pack)",
+            description: "Tailored for babies from 3 months onwards as they become more active and start solids. Provides higher levels of key nutrients to complement a weaning diet.",
+            keyBenefits: [
+                "Increased iron to support rapid brain development",
+                "Higher calcium & vitamin D for strong bones & teeth",
+                "Balanced proteins & carbohydrates for sustained energy",
+                "Probiotics & prebiotics for digestive health",
+                "Essential fatty acids including DHA for vision & cognition"
+            ],
+            preparation: "Follow tin instructions carefully. Use cooled boiled water (approx. 40°C). 1 scoop per 30ml water. Do not use previously prepared feeds.",
+            note: "From 6 months, introduce complementary foods while continuing breastfeeding or formula. Always seek pediatric advice for your baby's individual needs."
+        }
+    ];
+
+    function openProductModal(index) {
+        const product = products[index];
+        const modal = document.getElementById('productModal');
+        const content = document.getElementById('modalContent');
+
+        content.innerHTML = `
+            <h2 class="text-4xl font-bold text-[#001F3F] mb-2">${product.title}</h2>
+            <p class="text-xl text-gray-600 mb-8">${product.subtitle}</p>
+            
+            <div class="grid md:grid-cols-2 gap-10">
+                <div>
+                    <div class="bg-gray-50 rounded-2xl p-6 mb-6">
+                        <p class="text-3xl font-bold text-[#001F3F] mb-1">${product.price}</p>
+                        <p class="text-gray-500">Tin size</p>
+                    </div>
+                    
+                    <h4 class="text-2xl font-semibold text-[#001F3F] mb-4">Key Benefits</h4>
+                    <ul class="space-y-3 text-gray-700">
+                        ${product.keyBenefits.map(b => `<li class="flex items-start"><span class="text-[#00BFFF] mr-3 text-xl">•</span>${b}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-2xl font-semibold text-[#001F3F] mb-4">Description</h4>
+                    <p class="text-gray-700 mb-6 leading-relaxed">${product.description}</p>
+                    
+                    <h4 class="text-xl font-semibold text-[#001F3F] mb-3">Preparation Guidelines</h4>
+                    <p class="text-gray-600 mb-6">${product.preparation}</p>
+                    
+                    <div class="bg-amber-50 border-l-4 border-amber-400 p-5 rounded-r-2xl">
+                        <p class="text-gray-800 font-medium">${product.note}</p>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        modal.classList.remove('hidden');
+    }
+
+    // Optional: Close modal when clicking outside
+    window.onclick = function(event) {
+        const modal = document.getElementById('productModal');
+        if (event.target === modal) {
+            modal.classList.add('hidden');
+        }
+    }
+</script>
+
+    <!-- ABOUT US PREVIEW -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <img src="https://github.com/waseementerprises190website/website/blob/main/aboutimage.png" alt="Waseem Enterprises Story" 
+                     class="rounded-3xl shadow-2xl w-full">
+            </div>
+            <div>
+                <span class="text-[#00BFFF] font-semibold tracking-widest">SINCE 2015</span>
+                <h2 class="text-5xl font-bold logo-font tracking-tighter text-[#001F3F] mt-3">About Waseem Enterprises</h2>
+                <div class="prose text-lg mt-8 text-gray-600">
+                    <p>Founded in Pakistan with a mission to provide world-class nutrition to every child. Our state-of-the-art facility follows international GMP &amp; HACCP standards.</p>
+                    <p>We believe every baby deserves the best start in life. That’s why every tin/pack of Waseem milk is made with carefully sourced ingredients and rigorous quality testing.</p>
+                </div>
+                <div class="mt-10 grid grid-cols-2 gap-6">
+                    <div class="bg-gray-50 p-6 rounded-3xl">
+                        <div class="text-4xl font-bold text-[#001F3F]">50+</div>
+                        <div class="text-sm mt-1">Countries Reached</div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-3xl">
+                        <div class="text-4xl font-bold text-[#001F3F]">2M+</div>
+                        <div class="text-sm mt-1">Happy Parents</div>
+                    </div>
+                </div>
+                <a href="#about" class="mt-10 inline-flex items-center gap-x-3 text-[#00BFFF] font-medium text-lg">
+                    Our Full Story 
+                    <span class="text-3xl leading-none">→</span>
+					
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUTRITION & BENEFITS -->
+    <section id="nutrition" class="py-24 bg-[#001F3F] text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="uppercase tracking-widest text-[#00BFFF]">Science-Backed Nutrition</span>
+                <h2 class="text-5xl font-bold logo-font tracking-tighter mt-3">Complete Nutrition for Healthy Baby Growth</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-16">
+                <!-- Vitamins & Minerals -->
+                <div>
+                    <h3 class="text-3xl font-semibold mb-8 flex items-center gap-x-4">
+                        <span class="text-[#00BFFF]">Vitamins &amp; Minerals</span>
+                    </h3>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="flex gap-x-4">
+                            <div class="text-5xl">A</div>
+                            <div>
+                                <div class="font-semibold">Vitamin A</div>
+                                <div class="text-sm text-gray-300">Vision &amp; immunity</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-x-4">
+                            <div class="text-5xl">D</div>
+                            <div>
+                                <div class="font-semibold">Vitamin D</div>
+                                <div class="text-sm text-gray-300">Strong bones</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-x-4">
+                            <div class="text-5xl">C</div>
+                            <div>
+                                <div class="font-semibold">Vitamin C</div>
+                                <div class="text-sm text-gray-300">Iron absorption</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-x-4">
+                            <div class="text-5xl">Fe</div>
+                            <div>
+                                <div class="font-semibold">Iron</div>
+                                <div class="text-sm text-gray-300">Blood health</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Benefits -->
+                <div>
+                    <h3 class="text-3xl font-semibold mb-8">Key Benefits</h3>
+                    <ul class="space-y-6">
+                        <li class="flex gap-x-4">
+                            <i class="fa-solid fa-check-circle text-[#00BFFF] text-2xl mt-1"></i>
+                            <div>
+                                <div class="font-semibold text-xl">Brain &amp; Eye Development</div>
+                                <div class="text-gray-300">DHA &amp; ARA from natural sources</div>
+                            </div>
+                        </li>
+                        <li class="flex gap-x-4">
+                            <i class="fa-solid fa-check-circle text-[#00BFFF] text-2xl mt-1"></i>
+                            <div>
+                                <div class="font-semibold text-xl">Strong Bones &amp; Teeth</div>
+                                <div class="text-gray-300">Calcium + Vitamin D synergy</div>
+                            </div>
+                        </li>
+                        <li class="flex gap-x-4">
+                            <i class="fa-solid fa-check-circle text-[#00BFFF] text-2xl mt-1"></i>
+                            <div>
+                                <div class="font-semibold text-xl">Immune System Support</div>
+                                <div class="text-gray-300">Nucleotides &amp; prebiotics</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-20 bg-white/10 backdrop-blur-xl rounded-3xl p-10 text-center">
+                <p class="text-xl max-w-2xl mx-auto italic">
+                    “Prepared with carefully selected ingredients for reliable nutrition you can trust every single day.”
+                </p>
+                <div class="mt-6 text-[#00BFFF] font-medium">— Waseem Enterprises Quality Team</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="reviews" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-[#00BFFF] font-semibold">WHAT PARENTS SAY</span>
+                <h2 class="text-5xl font-bold logo-font tracking-tighter text-[#001F3F]">Real Stories From Real Parents</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-8 rounded-3xl">
+                    <div class="flex text-amber-400 text-2xl mb-6">★★★★★</div>
+                    <p class="text-lg italic">"My baby’s digestion improved within a week. No more colic! Thank you Waseem for such a high-quality formula."</p>
+                    <div class="mt-8 flex items-center gap-x-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-2xl"></div>
+                        <div>
+                            <div class="font-semibold">Ayesha Khan</div>
+                            <div class="text-sm text-gray-500">Mother of 4-month-old Zain • Lahore</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-8 rounded-3xl">
+                    <div class="flex text-amber-400 text-2xl mb-6">★★★★★</div>
+                    <p class="text-lg italic">"We switched from an international brand and saw better weight gain and happier baby. Best decision ever!"</p>
+                    <div class="mt-8 flex items-center gap-x-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-2xl"></div>
+                        <div>
+                            <div class="font-semibold">Muhammad Ali</div>
+                            <div class="text-sm text-gray-500">Father of 9-month-old Sara • Karachi</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-8 rounded-3xl">
+                    <div class="flex text-amber-400 text-2xl mb-6">★★★★★</div>
+                    <p class="text-lg italic">"The taste is so natural and my toddler actually enjoys drinking it. Packaging is premium too!"</p>
+                    <div class="mt-8 flex items-center gap-x-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-2xl"></div>
+                        <div>
+                            <div class="font-semibold">Fatima Hassan</div>
+                            <div class="text-sm text-gray-500">Mother of 18-month-old Ahmed • Islamabad</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#reviews" class="text-[#00BFFF] font-medium flex items-center justify-center gap-x-2">
+                    More than 1,247+ Reviews 
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+	<!-- BLOG PREVIEW -->
+	<section id="blog" class="py-24 bg-gray-50">
+		<div class="max-w-7xl mx-auto px-6">
+			<div class="flex justify-between items-end mb-12">
+				<div>
+					<span class="text-[#00BFFF] font-semibold">PARENTING GUIDES</span>
+					<h2 class="text-5xl font-bold logo-font tracking-tighter">Nutrition Tips &amp; Baby Care</h2>
+				</div>
+				<a href="#blog" class="hidden md:flex items-center gap-x-2 text-[#001F3F] font-medium">
+					View All Articles <span class="text-xl">→</span>
+				</a>
+			</div>
+			<div class="grid md:grid-cols-3 gap-8">
+				<div class="bg-white rounded-3xl overflow-hidden">
+					<img src="https://github.com/waseementerprises190website/website/blob/main/first%20image.png" 
+						 class="w-full h-56 object-cover" alt="Baby being bottle-fed with formula">
+					<div class="p-8">
+						<div class="text-xs text-gray-500">March 10, 2026</div>
+						<h3 class="font-semibold text-xl mt-3">How to Choose the Right Milk Formula for Your Baby</h3>
+						<p class="text-gray-600 mt-4 line-clamp-3">Expert tips from pediatricians on reading labels and understanding stages.</p>
+					</div>
+				</div>
+				<div class="bg-white rounded-3xl overflow-hidden">
+					<img src="https://github.com/waseementerprises190website/website/blob/main/second%20image.png" 
+						 class="w-full h-56 object-cover" alt="Smiling happy healthy baby">
+					<div class="p-8">
+						<div class="text-xs text-gray-500">March 5, 2026</div>
+						<h3 class="font-semibold text-xl mt-3">5 Signs Your Baby is Getting Enough Nutrition</h3>
+						<p class="text-gray-600 mt-4 line-clamp-3">Weight gain patterns, sleep, and energy levels explained.</p>
+					</div>
+				</div>
+				<div class="bg-white rounded-3xl overflow-hidden">
+					<img src="C:\Users\AliAhmed\Desktop\Website\Website important pictures\ChatGPT Image Mar 16, 2026, 03_32_11 AM.png" 
+						 class="w-full h-56 object-cover" alt="Mother gently bottle feeding her baby">
+					<div class="p-8">
+						<div class="text-xs text-gray-500">Feb 28, 2026</div>
+						<h3 class="font-semibold text-xl mt-3">Transitioning from Breast Milk to Formula</h3>
+						<p class="text-gray-600 mt-4 line-clamp-3">Step-by-step guide for smooth and gentle change.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold logo-font tracking-tighter">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-4">
+                <details class="group bg-gray-50 rounded-3xl p-8">
+                    <summary class="faq-summary flex justify-between items-center cursor-pointer font-medium text-xl">
+                        What is the right age to start Waseem Infant Formula?
+                        <span class="text-3xl transition-transform group-open:rotate-45">+</span>
+                    </summary>
+                    <div class="mt-6 text-gray-600 text-lg">
+                        Stage 1 is suitable from birth to 3 months. Always consult your pediatrician before starting formula.
+                    </div>
+                </details>
+
+                <details class="group bg-gray-50 rounded-3xl p-8">
+                    <summary class="faq-summary flex justify-between items-center cursor-pointer font-medium text-xl">
+                        How do I prepare the milk correctly?
+                        <span class="text-3xl transition-transform group-open:rotate-45">+</span>
+                    </summary>
+                    <div class="mt-6 text-gray-600 text-lg">
+                        Boil water and cool to 40°C. Add exact scoops as per pack instructions. Never use microwave.
+                    </div>
+                </details>
+
+                <details class="group bg-gray-50 rounded-3xl p-8">
+                    <summary class="faq-summary flex justify-between items-center cursor-pointer font-medium text-xl">
+                        Can I switch from breastfeeding?
+                        <span class="text-3xl transition-transform group-open:rotate-45">+</span>
+                    </summary>
+                    <div class="mt-6 text-gray-600 text-lg">
+                        Yes. We recommend gradual transition over 7–10 days for best results.
+                    </div>
+                </details>
+
+                <details class="group bg-gray-50 rounded-3xl p-8">
+                    <summary class="faq-summary flex justify-between items-center cursor-pointer font-medium text-xl">
+                        How long can I store an opened tin/pack?
+                        <span class="text-3xl transition-transform group-open:rotate-45">+</span>
+                    </summary>
+                    <div class="mt-6 text-gray-600 text-lg">
+                        Use within 3 weeks after opening. Store in a cool, dry place away from sunlight.
+                    </div>
+                </details>
+            </div>
+
+            <div class="text-center mt-12 text-[#00BFFF] font-medium">
+                Still have questions? <a href="#contact" class="underline">Contact our support team</a>
+            </div>
+        </div>
+    </section>
+
+	<!-- PERFECTLY SIZED CONTAINERS -->
+	<section id="contact" class="py-24 sm:py-32 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+		<div class="max-w-4xl mx-auto px-6">
+			
+			<!-- Header -->
+			<div class="text-center mb-20">
+				<h2 class="text-4xl sm:text-5xl lg:text-6xl font-black bg-gradient-to-r from-gray-900 via-slate-800 to-blue-900 bg-clip-text text-transparent mb-6 leading-tight">
+					Get In Touch
+				</h2>
+				<p class="text-xl sm:text-2xl text-slate-600 font-medium max-w-2xl mx-auto leading-relaxed">
+					Ready to start your project? I'm just a call or email away.
+				</p>
+			</div>
+
+			<!-- Contact Info Grid - CUSTOM SIZED CONTAINERS -->
+			<div class="grid md:grid-cols-3 gap-8">
+				
+				<!-- Phone - Perfect Single Line Number -->
+				<a href="tel:+923290816107" 
+				   class="group bg-white/80 backdrop-blur-md p-10 rounded-3xl border border-slate-100 shadow-xl hover:shadow-2xl hover:-translate-y-2 hover:bg-white transition-all duration-500 flex flex-col items-center justify-center text-center">
+					<div class="w-20 h-20 bg-gradient-to-br from-emerald-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 shadow-2xl group-hover:scale-110 transition-all duration-300 flex-shrink-0">
+						<i class="fa-solid fa-phone text-2xl text-white"></i>
+					</div>
+					<div class="text-xl font-black text-slate-900 mb-4 tracking-tight group-hover:text-emerald-600 transition-colors px-4 py-2 bg-slate-50/50 rounded-2xl w-full max-w-[240px] whitespace-nowrap">
+						+92 329 0816107
+					</div>
+					<div class="text-sm font-semibold text-slate-600">WhatsApp Available</div>
+				</a>
+
+				<!-- Email - Perfect Email Fit -->
+				<a href="mailto:waseementerprises190@gmail.com?subject=project%20inquiry" 
+				   class="group bg-white/80 backdrop-blur-md p-10 rounded-3xl border border-slate-100 shadow-xl hover:shadow-2xl hover:-translate-y-2 hover:bg-white transition-all duration-500 flex flex-col items-center justify-center text-center">
+					<div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 shadow-2xl group-hover:scale-110 transition-all duration-300 flex-shrink-0">
+						<i class="fa-solid fa-envelope text-2xl text-white"></i>
+					</div>
+					<div class="text-sm font-black text-slate-900 mb-4 group-hover:text-blue-600 transition-colors px-4 py-3 bg-slate-50/50 rounded-2xl w-full max-w-[280px] leading-relaxed break-words">
+						waseementerprises190@gmail.com
+					</div>
+					<div class="text-sm font-medium text-slate-500">Business Inquiries</div>
+				</a>
+
+				<!-- Location - Perfect Fit -->
+				<div class="bg-white/80 backdrop-blur-md p-10 rounded-3xl border border-slate-100 shadow-xl hover:shadow-2xl hover:-translate-y-2 hover:bg-white transition-all duration-500 flex flex-col items-center justify-center text-center">
+					<div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-violet-600 rounded-2xl flex items-center justify-center mb-6 shadow-2xl hover:scale-110 transition-all duration-300 flex-shrink-0">
+						<i class="fa-solid fa-location-dot text-2xl text-white"></i>
+					</div>
+					<div class="text-xl font-black text-slate-900 mb-4 tracking-tight px-4 py-2 bg-slate-50/50 rounded-2xl w-full max-w-[260px]">
+						Karachi, Pakistan
+					</div>
+					<div class="text-sm font-semibold text-slate-700 mt-1">Waseem Enterprises</div>
+				</div>
+			</div>
+
+			<!-- Subtle Footer Note -->
+			<div class="text-center mt-16 pt-12 border-t border-slate-200">
+				<p class="text-lg text-slate-600 font-medium">
+					Available Friday - Saturday | Response within 24 hours
+				</p>
+			</div>
+		</div>
+	</section>
+	
+	<!-- EXPLORE PRODUCTS SECTION – dark, close to footer but distinguishable -->
+	<section class="py-20 md:py-28 bg-gradient-to-b from-[#001F4F]/95 to-[#001F4F] relative overflow-hidden">
+		<!-- Subtle differentiation layer -->
+		<div class="absolute inset-0 bg-gradient-to-br from-blue-950/15 via-transparent to-indigo-950/10 pointer-events-none"></div>
+		
+		<!-- Very soft radial glow (optional – remove if you want flatter) -->
+		<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+			<div class="w-[60%] h-[60%] bg-gradient-to-br from-[#00BFFF]/8 via-transparent to-transparent rounded-full blur-3xl opacity-40"></div>
+		</div>
+
+		<div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+			<div class="inline-block">
+				<a href="#products"
+				   onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'}); return false;"
+				   class="group inline-flex items-center gap-x-4 bg-white/95 text-[#001F4F] font-bold text-xl md:text-2xl px-14 py-7 rounded-3xl shadow-2xl shadow-black/20 hover:bg-gradient-to-r hover:from-[#00BFFF] hover:to-[#0099cc] hover:text-white hover:shadow-[#00BFFF]/40 hover:scale-[1.05] active:scale-[0.98] transition-all duration-400 transform">
+					<i class="fa-solid fa-eye text-2xl md:text-3xl group-hover:rotate-12 transition-transform duration-300"></i>
+					<span>Explore Our Products Now</span>
+				</a>
+			</div>
+
+			<!-- Accent line – reversed colors for contrast on dark bg -->
+			<div class="w-40 h-1 mx-auto mt-10 bg-gradient-to-r from-[#00BFFF] to-white/30 rounded-full opacity-70"></div>
+		</div>
+	</section>
+    <!-- FOOTER -->
+    <footer class="bg-[#001F3F] text-white pt-20">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
+            <div>
+                <div class="flex items-center gap-x-3 mb-6">
+                    <div class="w-10 h-10 bg-white rounded-2xl flex items-center justify-center">
+                        <span class="text-[#001F3F] text-3xl font-bold logo-font">W</span>
+                    </div>
+                    <div class="logo-font text-3xl font-bold">Waseem Enterprises</div>
+                </div>
+                <p class="text-gray-400 text-sm">Premium nutrition for Pakistan’s future generations since 2015.</p>
+                
+                <div class="flex gap-x-6 mt-8">
+                    <i class="fa-brands fa-facebook text-2xl hover:text-[#00BFFF] cursor-pointer"></i>
+                    <i class="fa-brands fa-instagram text-2xl hover:text-[#00BFFF] cursor-pointer"></i>
+                    <i class="fa-brands fa-youtube text-2xl hover:text-[#00BFFF] cursor-pointer"></i>
+                </div>
+            </div>
+
+            <div>
+                <div class="font-medium mb-6 text-[#00BFFF]">Company</div>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="#about" class="hover:text-[#00BFFF]">About Us</a></li>
+                    <li><a href="#blog" class="hover:text-[#00BFFF]">Blog</a></li>
+					<!-- Your menu item -->
+
+                </ul>
+            </div>
+
+            <div>
+                <div class="font-medium mb-6 text-[#00BFFF]">Products</div>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="#products" class="hover:text-[#00BFFF]">Infant Formula</a></li>
+                    <li><a href="#products" class="hover:text-[#00BFFF]">Follow-On Milk</a></li>
+                  <!--  <li><a href="#products" class="hover:text-[#00BFFF]">Toddler Milk</a></li> -->
+                </ul>
+            </div>
+
+            <div>
+                <div class="font-medium mb-6 text-[#00BFFF]">Support</div>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="#faq" class="hover:text-[#00BFFF]">FAQ</a></li>
+                    <li><a href="#contact" class="hover:text-[#00BFFF]">Customer Care</a></li>
+                  <!--  <li><a href="#" class="hover:text-[#00BFFF]">Track Order</a></li> -->
+                </ul>
+            </div>
+        </div>
+
+        <div class="border-t border-white/10 mt-20 py-8">
+            <div class="max-w-7xl mx-auto px-6 text-xs text-gray-400 flex flex-col md:flex-row justify-between items-center gap-y-4">
+                <div>© 2015 Waseem Enterprises. All Rights Reserved.</div>
+                <div class="flex gap-x-8">
+    <a href="#" onclick="openModal('privacyModal'); return false;" class="hover:text-white">Privacy Policy</a>
+    <a href="#" onclick="openModal('termsModal'); return false;" class="hover:text-white">Terms &amp; Conditions</a>
+</div>
+
+<!-- Privacy Policy Modal -->
+<div id="privacyModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-2xl max-w-3xl w-full mx-4 max-h-[85vh] overflow-y-auto shadow-2xl relative">
+        <!-- Close button - absolute positioned -->
+        <button 
+            type="button"
+            onclick="document.getElementById('privacyModal').classList.add('hidden')"
+            class="absolute top-5 right-6 text-gray-600 hover:text-black text-4xl leading-none focus:outline-none transition-transform hover:scale-110"
+            aria-label="Close Privacy Policy"
+        >
+            ×
+        </button>
+
+        <div class="p-8 pt-14">  <!-- Added pt-14 to give space for the close button -->
+            <h3 class="text-2xl font-bold text-[#001F3F] mb-6">Privacy Policy</h3>
+            <div class="prose prose-sm sm:prose text-gray-700">
+                <p><strong>Last Updated: March 16, 2026</strong></p>
+                <p>At Waseem Enterprises, we are committed to protecting the privacy of our visitors, especially parents and caregivers seeking trusted nutrition information and products for their babies.</p>
+               
+                <h4 class="font-semibold mt-6">1. Information We Collect</h4>
+                <p>We may collect:</p>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li>Personal information you provide (name, email, shipping address, phone) when placing orders, subscribing to newsletters, or contacting us.</li>
+                    <li>Payment information (handled securely by trusted processors — we do not store full card details).</li>
+                    <li>Automatically collected data (IP address, browser type, pages visited, time spent) via cookies and similar technologies.</li>
+                </ul>
+
+                <h4 class="font-semibold mt-6">2. How We Use Your Information</h4>
+                <p>We use your data to:</p>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li>Process and fulfill orders for baby formula and related products.</li>
+                    <li>Provide customer support and respond to inquiries about nutrition, feeding, or product selection.</li>
+                    <li>Send important updates, promotions, or educational content about infant nutrition (you can unsubscribe anytime).</li>
+                    <li>Improve our website and personalize your experience.</li>
+                </ul>
+
+                <h4 class="font-semibold mt-6">3. Children's Privacy</h4>
+                <p>Our website is not directed to children under 16. We do not knowingly collect personal information from children. If you believe we have collected data from a child under 16 without parental consent, please contact us immediately so we can delete it.</p>
+
+                <h4 class="font-semibold mt-6">4. Sharing Your Information</h4>
+                <p>We share data only with:</p>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li>Service providers (shipping, payment processors, email services) who help us operate.</li>
+                    <li>Legal authorities when required by law.</li>
+                </ul>
+                <p>We do not sell your personal information.</p>
+
+                <h4 class="font-semibold mt-6">5. Data Security</h4>
+                <p>We implement reasonable security measures to protect your information. However, no method of transmission over the internet is 100% secure.</p>
+
+                <h4 class="font-semibold mt-6">6. Your Rights</h4>
+                <p>You may request access to, correction of, or deletion of your personal data by contacting us at [support@yourwebsite.com]. We will respond in accordance with applicable laws (e.g., GDPR, CCPA where relevant).</p>
+
+                <h4 class="font-semibold mt-6">7. Cookies & Tracking</h4>
+                <p>We use cookies for essential functions, analytics, and marketing. You can manage preferences via our cookie banner or browser settings.</p>
+
+                <p class="mt-6">Questions? Contact us at waseementerprises190@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Terms & Conditions Modal -->
+<div id="termsModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-2xl max-w-3xl w-full mx-4 max-h-[85vh] overflow-y-auto shadow-2xl relative">
+        <!-- Close button - absolute positioned -->
+        <button 
+            type="button"
+            onclick="document.getElementById('termsModal').classList.add('hidden')"
+            class="absolute top-5 right-6 text-gray-600 hover:text-black text-4xl leading-none focus:outline-none transition-transform hover:scale-110"
+            aria-label="Close Terms & Conditions"
+        >
+            ×
+        </button>
+
+        <div class="p-8 pt-14">  <!-- Added pt-14 to give space for the close button -->
+            <h3 class="text-2xl font-bold text-[#001F3F] mb-6">Terms & Conditions</h3>
+            <div class="prose prose-sm sm:prose text-gray-700">
+                <p><strong>Last Updated: March 16, 2026</strong></p>
+                <p>By accessing or using our website and purchasing baby milk formula or related products, you agree to these Terms & Conditions.</p>
+
+                <h4 class="font-semibold mt-6">1. Use of Website</h4>
+                <p>You must be at least 18 years old or have parental/guardian consent to use this site and place orders. The content is for informational purposes and is not a substitute for professional medical or pediatric advice.</p>
+
+                <h4 class="font-semibold mt-6">2. Product Information & Disclaimer</h4>
+                <p>All baby formula products should be used under the guidance of a healthcare professional. Breast milk is the best nutrition for infants. We provide general information only — consult your pediatrician before choosing or changing formula, especially for allergies, intolerances, or special needs.</p>
+
+                <h4 class="font-semibold mt-6">3. Orders & Payment</h4>
+                <p>Orders are subject to availability. We reserve the right to refuse or cancel any order. Payments are processed securely via our payment gateway. Prices include applicable taxes; shipping fees are displayed at checkout.</p>
+
+                <h4 class="font-semibold mt-6">4. Shipping & Delivery</h4>
+                <p>We ship within [your region, e.g., Pakistan / internationally]. Delivery times are estimates only. Risk of loss passes to you upon delivery. Please inspect packages immediately and report issues within 48 hours.</p>
+
+                <h4 class="font-semibold mt-6">5. Returns & Refunds</h4>
+                <p>Due to health and safety regulations for infant formula, opened or used products are non-returnable. Unopened products in original packaging may be returned within 14 days (subject to inspection). Refunds exclude shipping costs unless the product is defective/damaged.</p>
+
+                <h4 class="font-semibold mt-6">6. Limitation of Liability</h4>
+                <p>We are not liable for any indirect, incidental, or consequential damages arising from use of our site or products, to the extent permitted by law.</p>
+
+                <h4 class="font-semibold mt-6">7. Governing Law</h4>
+                <p>These terms are governed by the laws of Pakistan. Disputes shall be resolved in the courts of Islamabad.</p>
+
+                <p class="mt-6">We may update these terms at any time. Continued use constitutes acceptance of changes.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript for modal control (still useful for opening and outside-click closing) -->
+<script>
+    function openModal(modalId) {
+        document.getElementById(modalId).classList.remove('hidden');
+    }
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).classList.add('hidden');
+    }
+
+    // Close when clicking outside the modal content
+    window.onclick = function(event) {
+        if (event.target.classList.contains('fixed') && !event.target.classList.contains('hidden')) {
+            event.target.classList.add('hidden');
+        }
+    }
+</script>
+
+    <!-- PRODUCT MODAL -->
+    <div id="product-modal" class="fixed inset-0 bg-black/70 hidden flex items-center justify-center z-[9999]">
+        <div class="modal bg-white max-w-2xl w-full mx-4 rounded-3xl overflow-hidden">
+            <div class="flex justify-end p-6">
+                <button onclick="closeModal()" class="text-3xl text-gray-400 hover:text-gray-900">×</button>
+            </div>
+            
+            <div id="modal-content" class="px-8 pb-12">
+                <!-- Dynamic content injected by JS -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tailwind script already loaded via CDN
+        function initializeTailwind() {
+            // No extra config needed
+        }
+
+        // Mobile menu
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = hamburger.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-xmark');
+            }
+        });
+
+        // Close mobile menu when clicking links
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = hamburger.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-xmark');
+            });
+        });
+
+        // Product data
+        const products = [
+            {
+                name: "Infant Formula Stage 1",
+                age: "0-6 Months",
+                price: "₹799",
+                img: "https://picsum.photos/id/201/800/800",
+                desc: "Our gentlest formula specially designed for newborns. Contains prebiotics and easy-to-digest whey protein.",
+                ingredients: "Skimmed milk, whey protein, vegetable oils, lactose, DHA, ARA, vitamins &amp; minerals.",
+                keyFeatures: [
+                    "Gentle on tiny tummies",
+                    "Prebiotics for gut health",
+                    "Natural DHA for brain development",
+                    "No added sugar"
+                ]
+            },
+            {
+                name: "Follow-On Milk Stage 2",
+                age: "6-12 Months",
+                price: "₹849",
+                img: "https://picsum.photos/id/160/800/800",
+                desc: "Increased iron and calcium to support rapid growth and bone development during weaning.",
+                ingredients: "Whole milk, lactose, iron, calcium, zinc, vitamins A, C, D, E.",
+                keyFeatures: [
+                    "Higher iron content",
+                    "Supports weaning transition",
+                    "Stronger immunity",
+                    "Delicious natural taste"
+                ]
+            },
+            {
+                name: "Toddler Milk Stage 3",
+                age: "12+ Months",
+                price: "₹899",
+                img: "https://picsum.photos/id/292/800/800",
+                desc: "Complete nutrition for active toddlers. Probiotics and 26 essential vitamins &amp; minerals.",
+                ingredients: "Whole milk, probiotics, omega-3, iron, calcium, zinc, full vitamin complex.",
+                keyFeatures: [
+                    "Probiotics for digestion",
+                    "Supports active lifestyle",
+                    "Brain &amp; eye health",
+                    "Tastes like real milk"
+                ]
+            }
+        ];
+
+        // Open modal
+        function openProductModal(index) {
+            const product = products[index];
+            const modalContent = document.getElementById('modal-content');
+            
+            modalContent.innerHTML = `
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-5/12">
+                        <img src="${product.img}" class="rounded-3xl w-full shadow-lg">
+                    </div>
+                    <div class="md:w-7/12">
+                        <span class="px-5 py-1.5 bg-emerald-100 text-emerald-800 rounded-full text-sm">${product.age}</span>
+                        <h3 class="text-4xl font-bold mt-4">${product.name}</h3>
+                        <div class="text-4xl font-bold text-[#001F3F] mt-2">${product.price}</div>
+                        
+                        <p class="mt-6 text-gray-600">${product.desc}</p>
+                        
+                        <div class="mt-8">
+                            <div class="font-medium text-sm tracking-widest mb-4">KEY BENEFITS</div>
+                            <ul class="grid grid-cols-1 gap-y-4">
+                                ${product.keyFeatures.map(feature => `
+                                    <li class="flex items-center gap-x-3">
+                                        <i class="fa-solid fa-check text-[#00BFFF]"></i>
+                                        <span>${feature}</span>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+                        
+                        <div class="mt-12 pt-8 border-t">
+                            <button onclick="addToCart()" 
+                                    class="w-full bg-[#001F3F] text-white py-6 rounded-3xl font-semibold text-xl hover:bg-[#00BFFF] transition-all">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-xs text-gray-500 text-center">
+                    All products are manufactured under strict international standards. Halal certified.
+                </div>
+            `;
+            
+            document.getElementById('product-modal').classList.remove('hidden');
+            document.getElementById('product-modal').classList.add('flex');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('product-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Fake add to cart
+        function addToCart() {
+            alert("✅ Added to cart! (Demo mode – real cart coming soon)");
+            closeModal();
+        }
+
+        // Contact form
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            
+            setTimeout(() => {
+                alert(`Thank you, ${name}!\n\nYour message has been received. Our team will contact you within 2 hours.`);
+                contactForm.reset();
+            }, 800);
+        });
+
+        // Keyboard escape for modal
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "Escape") {
+                const modal = document.getElementById('product-modal');
+                if (!modal.classList.contains('hidden')) {
+                    closeModal();
+                }
+            }
+        });
+
+        // Smooth scroll for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Initialize everything
+        window.onload = function() {
+            initializeTailwind();
+            
+            // Fake live visitor count (demo)
+            console.log('%c🚀 Waseem Enterprises Premium Website Loaded Successfully', 'color:#00BFFF; font-family:monospace; font-size:12px');
+            
+            // Make sure modal is hidden
+            document.getElementById('product-modal').classList.add('hidden');
+        };
+    </script>
+</body>
+</html>
